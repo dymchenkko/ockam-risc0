@@ -10,4 +10,3 @@ risc0-build = { git = "https://github.com/stskeeps/risc0.git" }
 
 [dependencies]
 risc0-zkvm-guest = { git = "https://github.com/stskeeps/risc0.git" }
-

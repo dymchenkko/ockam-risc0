@@ -9,3 +9,7 @@ risc0-zkvm-core = { git = "https://github.com/stskeeps/risc0.git" }
 risc0-zkvm-host = { git = "https://github.com/stskeeps/risc0.git" }
 risc0-zkvm-serde = { git = "https://github.com/stskeeps/risc0.git" }
 serde = "1.0"
+signature_bls = "0.35.0"
+rand = "0.8.5"
+checker-core = { path = "../core" }
+rand_core = "0.6.3"
