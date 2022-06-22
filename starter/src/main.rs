@@ -19,12 +19,12 @@ fn main() {
 
     let sk = SecretKey::random(rand_generator).unwrap();
     let signat = Signature::new(&sk, &data.message).unwrap();
-    //let pk = PublicKey::from(&sk);
+    let pk = PublicKey::from(&sk);
     //let nn = signat.verify(pk, data);
 
     let mut prover = Prover::new(&MULTIPLY_PATH, MULTIPLY_ID).unwrap();
     prover.add_input(to_vec(&signat).unwrap().as_slice()).unwrap();
-    prover.add_input(to_vec(&sk).unwrap().as_slice()).unwrap();
+    prover.add_input(to_vec(&pk).unwrap().as_slice()).unwrap();
     prover.add_input(to_vec(&data).unwrap().as_slice()).unwrap();
     let receipt = prover.run().unwrap();
 
