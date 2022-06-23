@@ -3,6 +3,9 @@ name = "methods-guest"
 version = "0.1.0"
 edition = "2021"
 
+[profile.release]
+debug = 1
+
 [workspace]
 
 [build-dependencies]
@@ -12,8 +15,6 @@ risc0-build = { git = "https://github.com/stskeeps/risc0.git" }
 risc0-zkvm-guest = { git = "https://github.com/stskeeps/risc0.git" }
 signature_bls = "0.35.0"
 checker-core = { path = "../../core" }
-
-
 
 [patch.crates-io]
 radium = { git = "https://github.com/stskeeps/radium", branch = "fix-0.6.2" }
